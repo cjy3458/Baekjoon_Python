@@ -1,22 +1,38 @@
+def isPrime(a):
+    if (a<2):
+        return False
+    for i in range(2, a):
+        if(a%i == 0):
+            return False
+    return True
+
+n = int(input())
+num = map(int, input().split())
+PN = 0 
+
+for i in num:
+    if (isPrime(i)):
+        PN += 1
+
+print(PN)
+
+
+'''
 n = int(input())
 num = map(int, input().split())
 PN = 0 
 
 for i in num:
     count = 0 
-    j = 2
     if i > 1:
-        while j*j <= i:
+        for j in range(2, i):
             if i % j == 0:
                 count += 1
-                break
-            j += 1
         if count == 0:
             PN += 1
 
 print(PN)
-
-
+'''
 
 
 
